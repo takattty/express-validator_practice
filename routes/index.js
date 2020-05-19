@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 router.post('/submit', validationCheck, async (req, res, next) => {
   const error = validationResult(req);
   if(!error.isEmpty()){
-    console.log(error.errors);
+    console.info(error.errors);
   }
   const name = req.body.user_name;
   const password = req.body.user_pass;
